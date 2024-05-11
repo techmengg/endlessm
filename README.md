@@ -1,7 +1,5 @@
 # 🕳️ EndlessM
 
-   :)
-
 ## 🛠️ Technologies Used
 
 - HTML5
