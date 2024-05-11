@@ -28,7 +28,7 @@ To run this project locally:
 
 ## Screenshots
 
-![Screenshot](https://github.com/techmengg/tms-main-siteq/blob/main/assets/125338813/637cf75e-d220-46be-85aa-10b384130c46)
+[Screenshot](https://github.com/techmengg/tms-main-siteq/blob/main/assets/125338813/637cf75e-d220-46be-85aa-10b384130c46)
 
 ## License
 
