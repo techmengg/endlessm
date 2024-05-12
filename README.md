@@ -92,6 +92,7 @@ on('click', '#navbar .nav-link', function(e) {
   }
 }, true); // Use capturing phase for the event listener
 ```
+This functionality improves user experience by providing seamless navigation within the webpage, enhancing readability and engagement.
 
 ## License
 
