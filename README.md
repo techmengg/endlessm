@@ -1,11 +1,11 @@
 # 🕳️ EndlessM
 
-## 🛠️ Technologies Used
+## Technologies Used 🛠️
 
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap 
+[![JavaScript](https://img.shields.io/badge/-JavaScript-yellow?style=flat-square)](https://www.javascript.com/)
+[![Bootstrap](https://img.shields.io/badge/-Bootstrap-blue?style=flat-square)](https://getbootstrap.com/)
+[![HTML5](https://img.shields.io/badge/-HTML5-orange?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/-CSS3-blueviolet?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 ## ✨ Features
 
