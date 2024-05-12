@@ -17,7 +17,7 @@
 
 ## Getting Started
 
-To view my website online, visit #L endlessm.ca
+To view my website online, visit [endlessm.ca](https://endlessm.ca/)
 
 To run this project locally:
 
