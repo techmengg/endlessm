@@ -1,11 +1,9 @@
 # 🕳️ EndlessM
 
-## Technologies Used 🛠️
-
-[![JavaScript](https://img.shields.io/badge/-JavaScript-yellow?style=flat-square)](https://www.javascript.com/)
-[![Bootstrap](https://img.shields.io/badge/-Bootstrap-blue?style=flat-square)](https://getbootstrap.com/)
-[![HTML5](https://img.shields.io/badge/-HTML5-orange?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/-CSS3-blueviolet?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat-square)](https://www.javascript.com/)
+[![Bootstrap](https://img.shields.io/badge/-Bootstrap-7952B3?logo=bootstrap&logoColor=white&style=flat-square)](https://getbootstrap.com/)
+[![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 ## ✨ Features
 
