@@ -1,10 +1,3 @@
-/**
-* Template Name: Personal
-* Updated: Jan 09 2024 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 (function() {
   "use strict";
 
@@ -54,59 +47,66 @@
     this.classList.toggle('bi-x')
   })
 
-  /**
-   * Scrool with ofset on links with a class name .scrollto
-   */
-  on('click', '#navbar .nav-link', function(e) {
-    let section = select(this.hash)
-    if (section) {
-      e.preventDefault()
 
-      let navbar = select('#navbar')
-      let header = select('#header')
-      let sections = select('section', true)
-      let navlinks = select('#navbar .nav-link', true)
+//Functionality to handle smooth scrolling and section highlighting when clicking on navigation links
+on('click', '#navbar .nav-link', function(e) { 
+  let section = select(this.hash); // Retrieve the target section based on the clicked link's hash
+  
+  if (section) { // Check if the target section exists
+    e.preventDefault(); // Prevent the default action (navigating to a new page)
 
-      navlinks.forEach((item) => {
-        item.classList.remove('active')
-      })
+    // Select necessary elements
+    let navbar = select('#navbar');
+    let header = select('#header');
+    let sections = select('section', true);
+    let navlinks = select('#navbar .nav-link', true);
 
-      this.classList.add('active')
+    // Remove the 'active' class from all navigation links
+    navlinks.forEach((item) => {
+      item.classList.remove('active');
+    });
 
-      if (navbar.classList.contains('navbar-mobile')) {
-        navbar.classList.remove('navbar-mobile')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
-      }
+    // Add the 'active' class to the clicked navigation link, highlighting it as active
+    this.classList.add('active');
 
-      if (this.hash == '#header') {
-        header.classList.remove('header-top')
-        sections.forEach((item) => {
-          item.classList.remove('section-show')
-        })
-        return;
-      }
-
-      if (!header.classList.contains('header-top')) {
-        header.classList.add('header-top')
-        setTimeout(function() {
-          sections.forEach((item) => {
-            item.classList.remove('section-show')
-          })
-          section.classList.add('section-show')
-
-        }, 350);
-      } else {
-        sections.forEach((item) => {
-          item.classList.remove('section-show')
-        })
-        section.classList.add('section-show')
-      }
-
-      scrollto(this.hash)
+    // Toggle the mobile navigation menu if it's open
+    if (navbar.classList.contains('navbar-mobile')) {
+      navbar.classList.remove('navbar-mobile');
+      let navbarToggle = select('.mobile-nav-toggle');
+      navbarToggle.classList.toggle('bi-list');
+      navbarToggle.classList.toggle('bi-x');
     }
-  }, true)
+
+    // Adjust header and section classes based on whether the target section is the header or not
+    if (this.hash == '#header') { // If the target section is the header
+      header.classList.remove('header-top'); // Remove the 'header-top' class from the header
+      sections.forEach((item) => { // Remove the 'section-show' class from all sections
+        item.classList.remove('section-show');
+      });
+      return; 
+    }
+
+    // If the target section is not the header
+    if (!header.classList.contains('header-top')) { // If the header does not have the 'header-top' class
+      header.classList.add('header-top'); // Add the 'header-top' class to the header
+      setTimeout(function() { 
+        sections.forEach((item) => { // Remove the 'section-show' class from all sections
+          item.classList.remove('section-show');
+        });
+        section.classList.add('section-show'); // Add the 'section-show' class to the target section
+
+      }, 350); // Delay in milliseconds
+    } else { 
+      sections.forEach((item) => { // Remove the 'section-show' class from all sections
+        item.classList.remove('section-show');
+      });
+      section.classList.add('section-show'); // Add the 'section-show' class to the target section
+    }
+
+    scrollto(this.hash); // Scroll to the target section
+  }
+}, true); // Use capturing phase for the event listener
+
 
   /**
    * Activate/show sections on load with hash links
