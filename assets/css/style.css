@@ -8,7 +8,6 @@ body {
   color: #ffffff;
   position: relative;
   background: transparent;
-  overflow-x: hidden;
   min-height: 100%;
   min-height: -webkit-fill-available;
 }
@@ -24,7 +23,19 @@ body::before {
   z-index: -1;
 }
 
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
 html {
+  overflow: scroll;
+  overflow-x: hidden;
   background: #040404 url("../img/bg.jpg") top right no-repeat;
   background-size: cover;
 
@@ -400,17 +411,20 @@ h6 {
 }
 
 .navbar-mobile ul {
-  display: block;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
   position: absolute;
-  top: 55px;
-  right: 15px;
-  bottom: 45px;
-  left: 15px;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Centering trick */
   padding: 10px 0;
   overflow-y: auto;
-  transition: 0.3s;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: 0.1s;
+  border: 2px solid #18d26e;
 }
+
 
 .navbar-mobile li {
   padding: 12px 20px;
