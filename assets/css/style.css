@@ -992,6 +992,45 @@ section .container {
   background-color: #18d26e;
 }
 
+.portfolio-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-links a {
+  margin: 0 10px;
+  color: #ffffff; /* Adjust color as needed */
+}
+
+.portfolio-links a:hover {
+  color: #18d26e; /* Adjust hover color as needed */
+}
+
+.portfolio-languages {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-languages i {
+  font-size: 1.5em; /* Adjust size as needed */
+  margin: 0 10px;
+  color: #ffffff; /* Adjust color as needed */
+}
+
+.portfolio-languages i:hover {
+  color: #18d26e; /* Adjust hover color as needed */
+}
+
+
+
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
