@@ -8,13 +8,6 @@
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-## Features
-
-- Responsive design for seamless viewing on various devices.
-- Project showcase with descriptions and links to live demos or GitHub repositories.
-- About me section highlighting background, skills, and interests.
-- Contact form or information for reaching out.
-
 ## Getting Started
 
 To view my website online, visit [endlessm.ca](https://endlessm.ca/)
