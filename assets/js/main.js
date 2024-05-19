@@ -139,7 +139,19 @@ on('click', '#navbar .nav-link', function(e) {
   });
 
   /**
-   * Skills animation
+   * Skills animation Update the theme-color meta tag to the black when we scroll down the page
+   */
+  window.addEventListener('scroll', () => {
+    const metaTag = document.querySelector('meta[name="theme-color"]');
+    if (window.scrollY / window.innerHeight > 0.8) {
+      metaTag.setAttribute("content", "#000000");
+    } else {
+      metaTag.setAttribute("content", "#ffffff");
+    }
+  }, false);
+
+  /**
+   * Skills
    */
   let skilsContent = select('.skills-content');
   if (skilsContent) {

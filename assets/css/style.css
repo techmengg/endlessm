@@ -8,6 +8,8 @@ body {
   position: relative;
   background: transparent;
   overflow-x: hidden;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 body::before {
@@ -20,6 +22,14 @@ body::before {
   top: 0;
   height: 100vh;
   z-index: -1;
+}
+
+.Mobile-bar--bottom {
+  display: none;
+}
+
+html {
+  height: -webkit-fill-available;
 }
 
 @media (min-width: 1024px) {
