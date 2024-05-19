@@ -1,9 +1,10 @@
 /*--------------------------------------------------------------
                           CSS
 --------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,900&display=swap');
+
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #040404;
   color: #ffffff;
   position: relative;
   background: transparent;
@@ -15,7 +16,6 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/bg.jpg") top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -24,17 +24,93 @@ body::before {
   z-index: -1;
 }
 
-html { 
-  background-color: rgb(0, 0, 0);
+html {
+  background: #040404 url("../img/bg.jpg") top right no-repeat;
+  background-size: cover;
+
+  --lightBtn: #FE016C;
+  --lightBg: #584b3e;
+  --lightColor: #584b3e;
 }
-::-webkit-scrollbar {
-  width: 0;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+
+html[data-theme='dark'] {
+  background: #040404 url("../img/bg2.jpg") top right no-repeat;
+  background-size: cover;
+
+  --lightBtn: #FFBD07;
+  --lightBg: #221c16;
+  --lightColor: #dde3e9;
 }
-/* Optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-  background: #FF0000;
+
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
 }
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul li {
+  margin: 0 10px;
+}
+
+.container_toggle {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 55px;
+  height: 30px;
+  background: var(--lightBtn);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: '';
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  transition: left 320ms cubic-bezier(0.68, -0.55, 0.27, 01.55);
+}
+
+input:checked + label {
+  background: #FFBD07;
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 420ms!important;
+  transition-delay: 0!important;
+}
+
 
 
 .Mobile-bar--bottom {

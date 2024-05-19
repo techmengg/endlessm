@@ -1,5 +1,27 @@
+
 (function() {
   "use strict";
+
+  var checkbox = document.querySelector('input[name=mode]');
+
+  checkbox.addEventListener('change', function() {
+      if(this.checked) {
+          trans()
+          document.documentElement.setAttribute('data-theme', 'dark')
+      } else {
+          trans()
+          document.documentElement.setAttribute('data-theme', 'light')
+      }
+  })
+
+  let trans = () => {
+      document.documentElement.classList.add('transition');
+      window.setTimeout(() => {
+          document.documentElement.classList.remove('transition');
+      }, 1000)
+  }
+
+  
 
   /**
    * Easy selector helper function
@@ -46,7 +68,6 @@
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
   })
-
 
 //Functionality to handle smooth scrolling and section highlighting when clicking on navigation links
 on('click', '#navbar .nav-link', function(e) { 
