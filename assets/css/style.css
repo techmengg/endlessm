@@ -25,10 +25,9 @@ body::before {
 
 ::-webkit-scrollbar {
   width: 0;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+  background: transparent;  /* Make scrollbar invisible */
 }
 
-/* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
   background: #FF0000;
 }
@@ -39,7 +38,7 @@ html {
   background: #040404 url("../img/bg.jpg") top right no-repeat;
   background-size: cover;
 
-  --lightBtn: #FE016C;
+  --lightBtn: #18d26e;
   --lightBg: #584b3e;
   --lightColor: #584b3e;
 }
