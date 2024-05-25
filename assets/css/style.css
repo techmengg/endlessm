@@ -160,6 +160,18 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+/* Container for the responsive text */
+.responsive-text {
+  flex-wrap: nowrap;       /* Prevent the text from wrapping */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+  .responsive-text {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
