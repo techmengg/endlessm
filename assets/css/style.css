@@ -16,6 +16,7 @@ body::before {
   content: "";
   position: fixed;
   background-size: cover;
+  background-position: center;
   left: 0;
   right: 0;
   top: 0;
@@ -37,6 +38,7 @@ html {
   overflow-x: hidden;
   background: #040404 url("../img/bg.jpg") top right no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 
   --lightBtn: #18d26e;
   --lightBg: #584b3e;
@@ -46,6 +48,7 @@ html {
 html[data-theme='dark'] {
   background: #040404 url("../img/bg2.jpg") top right no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 
   --lightBtn: #FFBD07;
   --lightBg: #221c16;
@@ -121,8 +124,6 @@ html.transition *:after {
   transition-delay: 0!important;
 }
 
-
-
 .Mobile-bar--bottom {
   display: none;
 }
@@ -130,6 +131,13 @@ html.transition *:after {
 @media (min-width: 1024px) {
   body::before {
     background-attachment: fixed;
+  }
+}
+
+@media (max-width: 1023px) {
+  body::before {
+    background-size: cover;
+    background-position: center;
   }
 }
 
