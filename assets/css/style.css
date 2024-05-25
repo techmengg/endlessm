@@ -20,7 +20,7 @@ body::before {
   left: 0;
   right: 0;
   top: 0;
-  height: 100%;
+  height: 100vh;
   z-index: -1;
 }
 
@@ -128,16 +128,12 @@ html.transition *:after {
   display: none;
 }
 
-@media (min-width: 1024px) {
-  body::before {
-    background-attachment: fixed;
-  }
-}
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   body::before {
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
   }
 }
 
@@ -168,7 +164,7 @@ h6 {
 /* Media query for mobile devices */
 @media (max-width: 600px) {
   .responsive-text {
-    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    font-size: 1.0rem; /* Adjust font size for smaller screens */
   }
 }
 
@@ -1239,7 +1235,6 @@ section .container {
 /*--------------------------------------------------------------
 # Credits
 --------------------------------------------------------------*/
-/* Default styling for .credits */
 .credits {
   position: fixed;
   right: 0;
@@ -1253,12 +1248,10 @@ section .container {
 }
 
 @media (max-width: 992px) {
-  main .credits {
-    display: block; /* Show .credits only when in main section */
+  .credits {
     text-align: center;
-    padding: 2px 10px; /* Adjusted padding */
-    background: rgb(0, 0, 0);
-    font-size: 11px; /* Adjust font size for mobile */
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
   }
 }
 
