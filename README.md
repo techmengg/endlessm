@@ -14,7 +14,7 @@ To view my website online, visit [endlessm.ca](https://endlessm.ca/)
 
 To run this project locally:
 
-1. Clone this repository: `git clone https://github.com/techmengg/tms-main-siteq.git`
+1. Clone this repository: `git clone https://github.com/techmengg/endlessm.git`
 2. Open the project folder in your code editor.
 3. Open `index.html` in your web browser.
 
