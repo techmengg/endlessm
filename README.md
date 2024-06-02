@@ -87,7 +87,6 @@ on('click', '#navbar .nav-link', function(e) {
 ```
 This functionality improves user experience by providing seamless navigation within the webpage, enhancing readability and engagement.
 
-## License
+## Contributor
 
-
-This project is licensed under the [MIT License](LICENSE).
+- [techmengg](https://github.com/techmengg) - Developer
