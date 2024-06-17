@@ -87,6 +87,6 @@ on('click', '#navbar .nav-link', function(e) {
 ```
 This functionality improves user experience by providing seamless navigation within the webpage, enhancing readability and engagement.
 
-## Contributor
+## Contributor.
 
 - [techmengg](https://github.com/techmengg) - Developer :)
