@@ -81,7 +81,7 @@ on('click', '#navbar .nav-link', function(e) {
       section.classList.add('section-show'); // Add the 'section-show' class to the target section
     }
 
-    scrollto(this.hash); // Scroll to the target section
+    scrollto(this.hash); // Scroll to the target section.
   }
 }, true); // Use capturing phase for the event listener
 ```
