@@ -89,4 +89,4 @@ This functionality improves user experience by providing seamless navigation wit
 
 ## Contributor
 
-- [techmengg](https://github.com/techmengg) - Developer :)
+- [techmengg](https://github.com/techmengg) - Developer :D
