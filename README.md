@@ -8,7 +8,7 @@
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
-## Getting Started
+## Getting Started.
 
 To view my website online, visit [endlessm.ca](https://endlessm.ca/)
 
