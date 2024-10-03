@@ -270,3 +270,12 @@ on('click', '#navbar .nav-link', function(e) {
   new PureCounter();
 
 })()
+
+
+
+// Wait until the entire page (including images and resources) is fully loaded
+window.addEventListener("load", function () {
+  // Remove loading class and show the main content
+  document.body.classList.remove("loading");
+  document.body.classList.add("loaded");
+});
