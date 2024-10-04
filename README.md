@@ -20,7 +20,7 @@ To run this project locally:
 
 ## Preview
 
-![Screenshot 2024-05-11 173747](https://github.com/techmengg/tms-main-siteq/assets/125338813/9dcda60b-93d4-43c7-a65a-515f1db32601)
+![Screenshot 2024-10-03 231211](https://github.com/user-attachments/assets/033b3681-d56b-487b-b8e9-51cfe457cea4)
 
 ## Code Structure | main.js
 
