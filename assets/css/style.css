@@ -231,9 +231,13 @@ h6 {
   display: inline-block;
 }
 
+#header h1 a {
+    font-weight: 600; /* Change this value to adjust the thickness */
+}
+
 #header h2 {
   font-size: 24px;
-  margin-top: 20px;
+  margin-top: 5px;
   color: rgba(255, 255, 255, 0.8);
 }
 
