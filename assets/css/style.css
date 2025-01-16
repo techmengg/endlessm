@@ -169,6 +169,35 @@ h6 {
   }
 }
 
+/* Styles for the hover effect container */ 
+.hover-effect a {
+  text-decoration: none;
+  color: var(--lightColor); /* Use your existing color variable */
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+/* On hover: Change text color and add underline */
+.hover-effect a:hover {
+  color: var(--lightBtn); /* Highlight color */
+  text-decoration: underline;
+}
+
+/* Styles for the logo */
+.hover-effect .logo {
+  width: 24px;
+  height: auto;
+  margin-right: 0.5em;
+  transition: transform 0.3s ease;
+}
+
+/* On hover: Enlarge the logo */
+.hover-effect a:hover .logo {
+  transform: scale(1.2); /* Slight zoom */
+}
+
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -725,6 +754,14 @@ section .container {
   top: 0;
   background: #56b3f1;
   border: 2px solid #56b3f1;
+}
+
+.resume-item h4 {
+  transition: transform 0.3s ease-in-out;
+}
+
+.resume-item h4:hover {
+  transform: scale(1.01);
 }
 
 /*--------------------------------------------------------------
