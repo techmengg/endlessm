@@ -179,7 +179,7 @@ h6 {
 /* Styles for the hover effect container */ 
 .hover-effect a {
   text-decoration: none;
-  color: var(--lightColor); /* Use your existing color variable */
+  color: #ffffff; 
   display: inline-flex;
   align-items: center;
   transition: color 0.3s ease;
@@ -187,9 +187,10 @@ h6 {
 
 /* On hover: Change text color and add underline */
 .hover-effect a:hover {
-  color: var(--lightBtn); /* Highlight color */
+  color: #ffffff; 
   text-decoration: underline;
 }
+
 
 /* Styles for the logo */
 .hover-effect .logo {
@@ -231,9 +232,13 @@ h6 {
   font-family: "Poppins", sans-serif;
 }
 
-#header h1 a,
+#header h1 a {
+  font-weight: 600; /* Change this value to adjust the thickness */
+  color: #fcfcfc;
+}
+
 #header h1 a:hover {
-  color: #fff;
+  color: #59c1f1;
   line-height: 1;
   display: inline-block;
 }
@@ -540,7 +545,7 @@ section .container {
   margin: 0 0 20px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #aaaaaa;
+  color: #ffffff;
   font-family: "Poppins", sans-serif;
 }
 
@@ -549,7 +554,7 @@ section .container {
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: #56b3f1;
+  background: #ffffff;
   margin: 4px 10px;
 }
 
@@ -768,11 +773,15 @@ section .container {
 }
 
 .resume-item h4 {
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  color: #56b3f1;
+
 }
 
 .resume-item h4:hover {
   transform: scale(1.01);
+  color: #ffffff;
+
 }
 
 /*--------------------------------------------------------------
