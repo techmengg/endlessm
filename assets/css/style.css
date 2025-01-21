@@ -566,21 +566,26 @@ section .container {
   font-size: 14px;
   font-weight: 500;
   padding: 0;
-  line-height: 1px;
+  line-height: 1.5; /* Improve line height for readability */
   margin: 0 0 20px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Break long words if necessary */
+  display: flex; /* Use flexbox for better alignment */
+  align-items: center; /* Vertically center the text and line */
+  flex-wrap: wrap; /* Allow wrapping */
+  gap: 10px; /* Add space between text and line */
 }
 
 .section-title h2::after {
   content: "";
-  width: 120px;
+  width: 120px; /* Set a fixed width for the line */
   height: 1px;
-  display: inline-block;
   background: #ffffff;
-  margin: 4px 10px;
+  flex-shrink: 0; /* Prevent the line from shrinking */
 }
 
 .section-title p {
@@ -823,6 +828,7 @@ section .container {
   text-decoration: none;
   color: #ffffff; /* Default text color */
   font-size: 40px; /* Adjust text size */
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .resume-link i {
@@ -831,6 +837,7 @@ section .container {
 
 .resume-link:hover {
   color: #9dccff; /* Hover color for link and icon */
+  text-decoration: underline; /* Add underline on hover */
 }
 
 
@@ -1108,35 +1115,19 @@ section .container {
 /*--------------------------------------------------------------
 # Resource
 --------------------------------------------------------------*/
-.resource .info-box {
-  color: #444444;
-  padding: 20px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.08);
+.resource-list {
+  list-style-type: disc; /* Remove default bullet points */
+  padding: 30px;
+  margin: 0;
+  margin-top: -30px;
 }
 
-.resource .info-box i.bx {
-  font-size: 24px;
-  color: #56b3f1;
-  border-radius: 50%;
-  padding: 14px;
-  float: left;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.resource .info-box h3 {
-  font-size: 20px;
-  color: rgba(255, 255, 255, 0.5);
-  font-weight: 700;
-  margin: 10px 0 8px 68px;
-}
-
-.resource .info-box p {
-  padding: 0;
-  color: #fff;
-  line-height: 24px;
-  font-size: 14px;
-  margin: 0 0 0 68px;
+.resource-list li {
+  
+  margin-bottom: 3px; /* Add spacing between list items */
+  font-size: 16px; /* Base font size */
+  line-height: 1.5; /* Improve readability */
+  word-break: break-word; /* Break long URLs to prevent overflow */
 }
 
 .hover-link {
@@ -1170,7 +1161,17 @@ section .container {
   width: 40%;  /* Adjust the width of the line */
 }
 
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
 
+  .resource-list li a {
+    margin-top: 5px; /* Add spacing between text and link */
+  }
+}
+
+/*--------------------------------------------------------------
+# Loading
+--------------------------------------------------------------*/
 
 @keyframes animate-loading {
   0% {
