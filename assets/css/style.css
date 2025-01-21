@@ -578,6 +578,7 @@ section .container {
   align-items: center; /* Vertically center the text and line */
   flex-wrap: wrap; /* Allow wrapping */
   gap: 10px; /* Add space between text and line */
+  -webkit-hyphens: auto; /* Enable hyphenation for better wrapping */
 }
 
 .section-title h2::after {
@@ -597,6 +598,7 @@ section .container {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #fff;
+  -webkit-hyphens: auto; /* Enable hyphenation for better wrapping */
 }
 
 /*--------------------------------------------------------------

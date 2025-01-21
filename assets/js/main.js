@@ -15,11 +15,13 @@
   })
 
   let trans = () => {
-      document.documentElement.classList.add('transition');
+    document.documentElement.classList.add('transition');
+    requestAnimationFrame(() => {
       window.setTimeout(() => {
-          document.documentElement.classList.remove('transition');
-      }, 1000)
-  }
+        document.documentElement.classList.remove('transition');
+      }, 1000);
+    });
+  };
 
   /**
    * Easy selector helper function
@@ -37,35 +39,44 @@
    * Easy event listener function
    */
   const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all)
-
+    let selectEl = select(el, all);
+  
     if (selectEl) {
       if (all) {
-        selectEl.forEach(e => e.addEventListener(type, listener))
+        selectEl.forEach(e => {
+          e.addEventListener(type, listener);
+          if (type === 'click') {
+            e.addEventListener('touchstart', listener); // Add touchstart for iOS
+          }
+        });
       } else {
-        selectEl.addEventListener(type, listener)
+        selectEl.addEventListener(type, listener);
+        if (type === 'click') {
+          selectEl.addEventListener('touchstart', listener); // Add touchstart for iOS
+        }
       }
     }
-  }
+  };
 
   /**
    * Scrolls to an element with header offset
    */
   const scrollto = (el) => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
-  }
+    const element = select(el);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   /**
    * Mobile nav toggle
    */
   on('click', '.mobile-nav-toggle', function(e) {
+    e.preventDefault(); // Prevent default behavior
     let navbar = select('#navbar');
-    navbar.classList.toggle('navbar-mobile'); // Toggle the mobile menu
-    this.classList.toggle('bi-list'); // Toggle the menu icon
-    this.classList.toggle('bi-x'); // Toggle the close icon
+    navbar.classList.toggle('navbar-mobile');
+    this.classList.toggle('bi-list');
+    this.classList.toggle('bi-x');
   });
 
 //Functionality to handle smooth scrolling and section highlighting when clicking on navigation links
@@ -219,11 +230,11 @@ on('click', '#navbar .nav-link', function(e) {
 
       on('click', '#portfolio-flters li', function(e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        portfolioFilters.forEach((el) => {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
-
+      
         portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
@@ -301,20 +312,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Wait until the entire page (including images and resources) is fully loaded
 window.addEventListener("load", function () {
-  // Remove loading class and show the main content
   document.body.classList.remove("loading");
   document.body.classList.add("loaded");
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const mobileToggle = document.querySelector('.mobile-nav-toggle');
-  const navbarMobile = document.querySelector('.navbar-mobile');
-
-  if (mobileToggle && navbarMobile) {
-    mobileToggle.addEventListener('click', function () {
-      navbarMobile.classList.toggle('navbar-mobile-active');
-      this.classList.toggle('bi-list');
-      this.classList.toggle('bi-x');
-    });
-  }
-});
