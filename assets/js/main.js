@@ -305,3 +305,16 @@ window.addEventListener("load", function () {
   document.body.classList.remove("loading");
   document.body.classList.add("loaded");
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const mobileToggle = document.querySelector('.mobile-nav-toggle');
+  const navbarMobile = document.querySelector('.navbar-mobile');
+
+  if (mobileToggle && navbarMobile) {
+    mobileToggle.addEventListener('click', function () {
+      navbarMobile.classList.toggle('navbar-mobile-active');
+      this.classList.toggle('bi-list');
+      this.classList.toggle('bi-x');
+    });
+  }
+});

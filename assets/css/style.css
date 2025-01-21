@@ -212,10 +212,10 @@ h6 {
 #header {
   transition: ease-in-out 0.3s;
   position: relative;
-  height: 100vh;
+  height: 100vh; /* Full viewport height */
   display: flex;
   align-items: center;
-  z-index: 997;
+  z-index: 997; /* Lower than the button */
   overflow-y: auto;
 }
 
@@ -311,13 +311,13 @@ h6 {
 
 /* Header Top */
 #header.header-top {
-  height: 80px;
+  height: 80px; /* Smaller height for non-home pages */
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
-  background: rgb(0, 0, 0);
-
+  background: rgb(0, 0, 0); /* Background color */
+  z-index: 997; /* Lower than the button */
 }
 
 #header.header-top .social-links,
@@ -439,16 +439,29 @@ h6 {
  Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #fff;
-  font-size: 28px;
+  color: #fff; /* Icon color */
+  font-size: 28px; /* Icon size */
   cursor: pointer;
-  display: none;
+  display: none; /* Hidden by default */
   line-height: 0;
   transition: 0.5s;
-  position: fixed;
+  position: fixed; /* Always fixed */
   right: 15px;
-  top: 15px;
+  top: 15px; /* Fixed distance from the top */
+  background: transparent; /* Transparent background */
+  border: none; /* Remove default button border */
+  padding: 0; /* Remove default padding */
+  z-index: 9999; /* Ensure it's above other elements */
 }
+
+.mobile-nav-toggle:hover {
+  color: #56b3f1; /* Change icon color on hover */
+}
+
+.mobile-nav-toggle:focus {
+  outline: none; /* Remove focus outline */
+}
+
 
 @media (max-width: 991px) {
   .mobile-nav-toggle {
@@ -462,15 +475,19 @@ h6 {
 
 .navbar-mobile {
   position: fixed;
-  overflow: hidden;
   top: 0;
-  right: 0;
   left: 0;
+  right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 1);
-  transition: 0.3s;
-  z-index: 999;
-  margin-top: 0;
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden; /* Ensure no scrolling */
+  display: -webkit-box; /* Fallback for older iOS */
+  display: -ms-flexbox; /* Fallback for older iOS */
+  display: flex;
 }
 
 .navbar-mobile .mobile-nav-toggle {
