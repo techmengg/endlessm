@@ -62,10 +62,11 @@
    * Mobile nav toggle
    */
   on('click', '.mobile-nav-toggle', function(e) {
-    select('#navbar').classList.toggle('navbar-mobile')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
-  })
+    let navbar = select('#navbar');
+    navbar.classList.toggle('navbar-mobile'); // Toggle the mobile menu
+    this.classList.toggle('bi-list'); // Toggle the menu icon
+    this.classList.toggle('bi-x'); // Toggle the close icon
+  });
 
 //Functionality to handle smooth scrolling and section highlighting when clicking on navigation links
 on('click', '#navbar .nav-link', function(e) { 

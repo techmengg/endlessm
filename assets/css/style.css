@@ -291,15 +291,16 @@ h6 {
 @media (max-width: 992px) {
   #header h1 {
     font-size: 36px;
+    
   }
 
   #header h2 {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 45px;
   }
 
   #header .social-links {
-    margin-top: 15px;
+    margin-top: -5px;
   }
 
   #header .container {
@@ -316,9 +317,8 @@ h6 {
   left: 0;
   top: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  backdrop-filter: blur(10px); /* Apply blur effect */
-  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  background: rgb(0, 0, 0);
+
 }
 
 #header.header-top .social-links,
@@ -329,7 +329,9 @@ h6 {
 #header.header-top h1 {
   margin-right: auto;
   font-size: 36px;
+  padding-top: 20px; /* Add vertical padding above the H1 */
 }
+
 
 #header.header-top img {
   max-height: 60px;
@@ -339,27 +341,31 @@ h6 {
 #header.header-top .container {
   display: flex;
   align-items: center;
+  
 }
 
 #header.header-top .navbar {
   margin: 0;
+  
 }
 
 @media (max-width: 768px) {
   #header.header-top {
-    height: 60px;
+    height: 50px;
+    
   }
 
   #header.header-top h1 {
     font-size: 26px;
+    
   }
 }
 
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/**
-* Desktop Navigation 
+/*
+ Desktop Navigation 
 */
 .navbar {
   padding: 0;
@@ -430,8 +436,9 @@ h6 {
   color: #fff;
 }
 
-/**
-* Mobile Navigation 
+
+/*
+ Mobile Navigation 
 */
 .mobile-nav-toggle {
   color: #fff;
@@ -462,7 +469,7 @@ h6 {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 1);
   transition: 0.3s;
   z-index: 999;
   margin-top: 0;
@@ -974,7 +981,6 @@ section .container {
   right: 15px;
 }
 
-
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
@@ -1083,8 +1089,6 @@ section .container {
 .portfolio-languages i:hover {
   color: #3aa7f0; /* Adjust hover color as needed */
 }
-
-
 
 /*--------------------------------------------------------------
 # Resource
@@ -1196,44 +1200,45 @@ section .container {
 }
 
 
-  /* Full-screen loading overlay */ /* Full-screen loading overlay */
+
+
 
 /* Full-screen loading overlay */
 #loader {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
 /* Loader Animation */
 .spinner {
-    border: 12px solid #f3f3f3; /* Light gray */
-    border-top: 12px solid #56b3f1; /* Blue */
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    animation: spin 1.5s linear infinite;
+  border: 12px solid #f3f3f3; /* Light gray */
+  border-top: 12px solid #56b3f1; /* Blue */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1.5s linear infinite;
 }
 
 /* Spin animation */
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /* Hide body content during loading */
 body.loading {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 /* Hide loader when content is loaded */
 body.loaded #loader {
-    display: none;
+  display: none;
 }
