@@ -36,7 +36,7 @@ body::before {
 html {
   overflow: scroll;
   overflow-x: hidden;
-  background: #040404 url("../img/bg.webp") top right no-repeat;
+  background: #040404 url("../img/bg.png") top right no-repeat;
   background-size: cover;
   background-attachment: fixed;
 
@@ -160,6 +160,7 @@ h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
+  font-weight: 600;
 }
 
 /* Container for the responsive text */
@@ -315,7 +316,9 @@ h6 {
   left: 0;
   top: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
 }
 
 #header.header-top .social-links,
@@ -561,6 +564,7 @@ section .container {
 .section-title p {
   margin: 0;
   margin: -15px 0 15px 0;
+  margin-bottom: 5px;
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
@@ -708,7 +712,7 @@ section .container {
 }
 
 .interests .icon-box:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(95, 204, 255, 0.712);
 }
 
 /*--------------------------------------------------------------
@@ -768,105 +772,52 @@ section .container {
   border-radius: 50px;
   left: -9px;
   top: 0;
-  background: #56b3f1;
+  background: #89d0ff;
   border: 2px solid #56b3f1;
 }
 
 .resume-item h4 {
-  transition: transform 0.2s ease-in-out;
-  color: #56b3f1;
+  color: #89d0ff;
 
 }
 
 .resume-item h4:hover {
-  transform: scale(1.01);
   color: #ffffff;
 
 }
 
-/*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
-.services .icon-box {
-  text-align: center;
-  background: rgba(204, 204, 204, 0.1);
-  padding: 80px 20px;
-  transition: all ease-in-out 0.3s;
+.resume-item {
+  margin-bottom: 1px; /* Reduce the space between items */
 }
 
-.services .icon-box .icon {
-  margin: 0 auto;
-  width: 64px;
-  height: 64px;
-  background: #56b3f1;
-  border-radius: 5px;
-  transition: all 0.3s ease-out 0s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  transform-style: preserve-3d;
+.resume-item h4, 
+.resume-item h5, 
+.resume-item p {
+  margin-bottom: 5px; /* Reduce the space between the individual elements */
 }
 
-.services .icon-box .icon i {
-  color: #fff;
-  font-size: 28px;
+
+.resume-link {
+  text-decoration: none;
+  color: #ffffff; /* Default text color */
+  font-size: 40px; /* Adjust text size */
 }
 
-.services .icon-box .icon::before {
-  position: absolute;
-  content: "";
-  left: -8px;
-  top: -8px;
-  height: 100%;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 5px;
-  transition: all 0.3s ease-out 0s;
-  transform: translateZ(-1px);
+.resume-link i {
+  margin-right: -2px; /* Add spacing between icon and text */
 }
 
-.services .icon-box h4 {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 24px;
+.resume-link:hover {
+  color: #9dccff; /* Hover color for link and icon */
 }
 
-.services .icon-box h4 a {
-  color: #fff;
-}
-
-.services .icon-box p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.services .icon-box:hover {
-  background: #56b3f1;
-  border-color: #56b3f1;
-}
-
-.services .icon-box:hover .icon {
-  background: #fff;
-}
-
-.services .icon-box:hover .icon i {
-  color: #56b3f1;
-}
-
-.services .icon-box:hover .icon::before {
-  background: #56b3f1;
-}
-
-.services .icon-box:hover h4 a,
-.services .icon-box:hover p {
-  color: #fff;
-}
 
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+/* Text Boxes */
+
+
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
@@ -914,7 +865,7 @@ section .container {
 
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
   position: absolute;
   left: 30px;
   right: 30px;
@@ -923,6 +874,15 @@ section .container {
   transition: all ease-in-out 0.3s;
   z-index: 2;
   opacity: 0;
+}
+
+.portfolio .portfolio-wrap:hover::before {
+  background: rgba(0, 0, 0, 1); /* Fully opaque black on hover */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
 }
 
 .portfolio .portfolio-wrap .portfolio-info {
@@ -978,10 +938,10 @@ section .container {
 .portfolio .portfolio-wrap .portfolio-info p {
   color: #ffffff;
   font-size: 14px;
-  text-transform: uppercase;
-  padding: 0;
-  margin: 0;
+  padding: 0 15px; /* Add horizontal padding */
+  margin: 0 15px;   /* Add horizontal margin */
 }
+
 
 .portfolio .portfolio-wrap .portfolio-links {
   text-align: center;
@@ -1000,14 +960,6 @@ section .container {
   color: #3aa7f0;
 }
 
-.portfolio .portfolio-wrap:hover::before {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 1;
-}
-
 .portfolio .portfolio-wrap:hover .portfolio-info {
   opacity: 1;
 }
@@ -1021,6 +973,7 @@ section .container {
   bottom: 15px;
   right: 15px;
 }
+
 
 /*--------------------------------------------------------------
 # Portfolio Details
@@ -1134,16 +1087,16 @@ section .container {
 
 
 /*--------------------------------------------------------------
-# Contact
+# Resource
 --------------------------------------------------------------*/
-.contact .info-box {
+.resource .info-box {
   color: #444444;
   padding: 20px;
   width: 100%;
   background: rgba(255, 255, 255, 0.08);
 }
 
-.contact .info-box i.bx {
+.resource .info-box i.bx {
   font-size: 24px;
   color: #56b3f1;
   border-radius: 50%;
@@ -1152,14 +1105,14 @@ section .container {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.contact .info-box h3 {
+.resource .info-box h3 {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 700;
   margin: 10px 0 8px 68px;
 }
 
-.contact .info-box p {
+.resource .info-box p {
   padding: 0;
   color: #fff;
   line-height: 24px;
@@ -1167,118 +1120,38 @@ section .container {
   margin: 0 0 0 68px;
 }
 
-.contact .info-box .social-links {
-  margin: 5px 0 0 68px;
-  display: flex;
+.hover-link {
+  text-decoration: none; /* Remove default underline */
+  color: #eb86ff; /* Blue color for the text */
+  position: relative;
 }
 
-.contact .info-box .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  color: #fff;
-  line-height: 1;
-  margin-right: 12px;
-  transition: 0.3s;
+.hover-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px; /* Thickness of the line */
+  background-color: #007BFF; /* Blue color for the line */
+  bottom: -2px; /* Position below the text */
+  left: 0;
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out; /* Smooth animation */
 }
 
-.contact .info-box .social-links a:hover {
-  color: #56b3f1;
+.hover-link:hover::after {
+  transform: scaleX(1); /* Expand to full width */
+  transform-origin: bottom left;
 }
 
-.contact .php-email-form {
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.08);
+.separator {
+  border: none;
+  border-top: 2px solid #fff;  /* Set the line color to white */
+  margin: 30px 0;  /* Center the line and give it some space */
+  width: 40%;  /* Adjust the width of the line */
 }
 
-.contact .php-email-form .error-message {
-  display: none;
-  background: rgba(255, 255, 255, 0.08);
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
 
-.contact .php-email-form .error-message br+br {
-  margin-top: 25px;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  background: rgba(255, 255, 255, 0.08);
-  background: #56b3f1;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: rgba(255, 255, 255, 0.08);
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #56b3f1;
-  border-top-color: #eee;
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 0;
-  transition: 0.3s;
-  color: #fff;
-}
-
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
-  background-color: rgba(255, 255, 255, 0.11);
-}
-
-.contact .php-email-form input::-moz-placeholder,
-.contact .php-email-form textarea::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.3);
-  opacity: 1;
-}
-
-.contact .php-email-form input::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.3);
-  opacity: 1;
-}
-
-.contact .php-email-form input {
-  padding: 10px 15px;
-}
-
-.contact .php-email-form textarea {
-  padding: 12px 15px;
-}
-
-.contact .php-email-form button[type=submit] {
-  background: #56b3f1;
-  border: 0;
-  padding: 10px 30px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 4px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: #56b3f1;
-}
 
 @keyframes animate-loading {
   0% {

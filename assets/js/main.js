@@ -271,7 +271,32 @@ on('click', '#navbar .nav-link', function(e) {
 
 })()
 
+document.addEventListener('DOMContentLoaded', function () {
+  const filterButtons = document.querySelectorAll('#portfolio-flters li');
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
 
+  filterButtons.forEach((button) => {
+    button.addEventListener('click', function () {
+      // Remove active class from all buttons
+      filterButtons.forEach((btn) => btn.classList.remove('filter-active'));
+      // Add active class to the clicked button
+      this.classList.add('filter-active');
+
+      const filterValue = this.getAttribute('data-filter');
+
+      // Show/hide portfolio items based on the filter
+      portfolioItems.forEach((item) => {
+        if (filterValue === '*' || item.classList.contains(filterValue.replace('.', ''))) {
+          item.classList.remove('hide');
+          item.classList.add('show');
+        } else {
+          item.classList.remove('show');
+          item.classList.add('hide');
+        }
+      });
+    });
+  });
+});
 
 // Wait until the entire page (including images and resources) is fully loaded
 window.addEventListener("load", function () {
