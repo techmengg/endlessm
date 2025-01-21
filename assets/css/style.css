@@ -36,7 +36,7 @@ body::before {
 html {
   overflow: scroll;
   overflow-x: hidden;
-  background: #040404 url("../img/bg.png") top right no-repeat;
+  background: #040404 url("../img/bg.webp") top right no-repeat;
   background-size: cover;
   background-attachment: fixed;
 
