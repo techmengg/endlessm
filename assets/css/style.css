@@ -397,7 +397,7 @@ h6 {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
   white-space: nowrap;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .navbar a i,
@@ -417,7 +417,7 @@ h6 {
   background-color: #56b3f1;
   visibility: hidden;
   width: 0px;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
 }
 
 .navbar a:hover:before,
@@ -444,7 +444,7 @@ h6 {
   cursor: pointer;
   display: none; /* Hidden by default */
   line-height: 0;
-  transition: 0.5s;
+  transition: 0.2s;
   position: fixed; /* Always fixed */
   right: 15px;
   top: 15px; /* Fixed distance from the top */
