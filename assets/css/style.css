@@ -36,9 +36,10 @@ body::before {
 html {
   overflow: scroll;
   overflow-x: hidden;
-  background: #040404 url("../img/bg.webp") top right no-repeat;
+  background: #000000 ; /*url("../img/bg.webp") top right no-repeat */
   background-size: cover;
   background-attachment: fixed;
+  scroll-behavior: auto !important; /* Disable smooth scrolling */
 
   /* --lightBtn: #18d26e; */
   --lightBtn: #56b3f1;
@@ -47,7 +48,7 @@ html {
 }
 
 html[data-theme='dark'] {
-  background: #040404 url("../img/bg1.webp") top right no-repeat;
+  background: #000520; /*url("../img/bg1.webp") top right no-repeat */
   background-size: cover;
   background-attachment: fixed;
 
@@ -420,19 +421,6 @@ h6 {
   transition: all 0.2s ease-in-out 0s;
 }
 
-.navbar a:hover:before,
-.navbar li:hover>a:before,
-.navbar .active:before {
-  visibility: visible;
-  width: 25px;
-}
-
-.navbar a:hover,
-.navbar .active,
-.navbar .active:focus,
-.navbar li:hover>a {
-  color: #fff;
-}
 
 
 /*
@@ -471,6 +459,22 @@ h6 {
   .navbar ul {
     display: none;
   }
+
+  .navbar-mobile ul {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Centering trick */
+    padding: 10px 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    transition: 0.1s;
+    border: 2px solid #56b3f1;
+  }
 }
 
 .navbar-mobile {
@@ -480,7 +484,7 @@ h6 {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 1);
-  z-index: 9999;
+  z-index: 9998;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -488,6 +492,8 @@ h6 {
   display: -webkit-box; /* Fallback for older iOS */
   display: -ms-flexbox; /* Fallback for older iOS */
   display: flex;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .navbar-mobile .mobile-nav-toggle {
@@ -506,6 +512,7 @@ h6 {
   left: 50%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Centering trick */
   padding: 10px 0;
+  max-height: 100vh;
   overflow-y: auto;
   transition: 0.1s;
   border: 2px solid #56b3f1;
@@ -598,7 +605,8 @@ section .container {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #fff;
-  -webkit-hyphens: auto; /* Enable hyphenation for better wrapping */
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Break long words if necessary */
 }
 
 /*--------------------------------------------------------------

@@ -58,15 +58,7 @@
     }
   };
 
-  /**
-   * Scrolls to an element with header offset
-   */
-  const scrollto = (el) => {
-    const element = select(el);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
+
 
   /**
    * Mobile nav toggle
@@ -125,7 +117,6 @@ on('click', '#navbar .nav-link', function(e) {
           item.classList.remove('section-show');
         });
         section.classList.add('section-show'); // Add the 'section-show' class to the target section
-
       }, 350); // Delay in milliseconds
     } else { 
       sections.forEach((item) => { // Remove the 'section-show' class from all sections
@@ -134,7 +125,7 @@ on('click', '#navbar .nav-link', function(e) {
       section.classList.add('section-show'); // Add the 'section-show' class to the target section
     }
 
-    scrollto(this.hash); // Scroll to the target section
+    scrollto(this.hash); // Scroll to the target section without smooth scrolling
   }
 }, true); // Use capturing phase for the event listener
 
