@@ -516,6 +516,7 @@ h6 {
   overflow-y: auto;
   transition: 0.1s;
   border: 2px solid #56b3f1;
+  z-index: 99999 !important; /* Ensure it's on top */
 }
 
 
