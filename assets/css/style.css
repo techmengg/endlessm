@@ -40,6 +40,8 @@ html {
   background-size: cover;
   background-attachment: fixed;
   scroll-behavior: auto !important; /* Disable smooth scrolling */
+  transition: background 0.3s ease;
+
 
   /* --lightBtn: #18d26e; */
   --lightBtn: #56b3f1;
@@ -47,14 +49,15 @@ html {
   --lightColor: #584b3e;
 }
 
+
 html[data-theme='dark'] {
-  background: #000520; /*url("../img/bg1.webp") top right no-repeat */
+  background: #030913; /* Fallback solid color so we dont get flashed by the sun  itself*/
   background-size: cover;
   background-attachment: fixed;
 
   --lightBtn: #FFBD07;
   --lightBg: #221c16;
-  --lightColor: #dde3e9;
+  --lightColor: #000000;
 }
 
 input[type=checkbox] {
